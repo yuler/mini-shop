@@ -1,0 +1,5 @@
+.DS_Store
+node_modules
+.env
+miniprogram_npm
+client/**/*.js
