@@ -1,12 +1,25 @@
 <view class="container">
-  <view class="block">
-    <text class="block">Example for `mp-icon` component</text>
-    <!-- Example for use weui `mp-icon` component -->
-    <mp-icon icon="add" color="black" size="{{25}}"></mp-icon>
-    <mp-icon icon="translate" color="black" size="{{25}}"></mp-icon>
-  </view>
-
-  <view class="block bg-black">
-    <text>{{time}}</text>
+  <view class="mt-4 px-2 grid grid-cols-2 gap-2">
+    <view
+      wx:for="{{5}}"
+      wx:for-index="n"
+      wx:key="n"
+      class="bg-white rounded overflow-hidden"
+      bind:tap="gotoProduct"
+      data-id="{{n}}"
+    >
+      <image
+        mode="widthFix"
+        class="w-full"
+        src="https://go.cdn.heytea.com/storage/ad/2022/03/07/6922f14e1b034f02ad706917b4a7e79d.jpg-app"
+      />
+      <view class="px-2">
+        <view class="text-lg">桃子{{n}}号</view>
+        <view class="flex justify-between">
+          <view class="text-lg font-bold">￥99</view>
+          <view class="text-gray-800">销量很好</view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

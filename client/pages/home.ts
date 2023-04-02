@@ -18,4 +18,8 @@ enchangePage({
       })
     })
   },
+  gotoProduct(event: MP.Touch) {
+    const {id} = event.currentTarget.dataset
+    $app.$goto(`/pages/product/id?id=${id}`)
+  },
 })

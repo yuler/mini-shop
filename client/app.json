@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/home"],
+  "pages": ["pages/home", "pages/product/id"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
