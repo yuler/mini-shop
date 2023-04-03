@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="mt-4 px-2 grid grid-cols-2 gap-2">
+  <view class="mt-4 pb-10 px-2 grid grid-cols-2 gap-2">
     <view
       wx:for="{{5}}"
       wx:for-index="n"

@@ -2,17 +2,22 @@
 
 > 微信小程序
 
+## Features
+
+- Home page for list products
+
 ## Development
 
 ```bash
+cp .env.example .env
 pnpm install
+pnpm run ide:npm
 pnpm run ide:open
 pnpm run dev
 ```
 
 ## TODO:
 
-- [ ] Home page
 - [ ] Detail Page
 - [ ] Confirm order page
 - [ ] Profile Page
