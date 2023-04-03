@@ -2,11 +2,12 @@
   "pages": [
     "pages/home",
     "pages/profile",
-    "pages/product/id"
+    "pages/product/id",
+    "pages/product/confirm"
   ],
   "tabBar": {
-    "color": "#333",
-    "selectedColor": "#111",
+    "color": "#999",
+    "selectedColor": "#333",
     "list": [
       {
         "text": "首页",

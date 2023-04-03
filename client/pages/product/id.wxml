@@ -1,3 +1,51 @@
-<view>
-  <view>商品详情页面</view>
+<view class="bg-white">
+  <swiper
+    indicator-dots="{{true}}"
+    autoplay="{{true}}"
+    interval="{{3000}}"
+    duration="{{1000}}"
+    class="h-600rpx"
+  >
+    <block wx:for="{{3}}" wx:key="*this" wx:for-index="n">
+      <swiper-item>
+        <image
+          src="https://go.cdn.heytea.com/storage/ad/2022/03/07/6922f14e1b034f02ad706917b4a7e79d.jpg-app"
+          mode="widthFix"
+          class="w-full"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="px-4 py-2">
+    <view class="text-lg font-bold">桃子1号</view>
+    <view class="text-sm text-grap-500">blah....blah....blah....</view>
+  </view>
+  <view class="flex flex-col pb-20">
+    <view class="px-4 py-2 text-lg font-bold">商品详情</view>
+    <image
+      src="https://go.cdn.heytea.com/storage/ad/2022/03/07/6922f14e1b034f02ad706917b4a7e79d.jpg-app"
+      mode="widthFix"
+      class="w-full"
+    />
+    <image
+      src="https://go.cdn.heytea.com/storage/ad/2022/03/07/6922f14e1b034f02ad706917b4a7e79d.jpg-app"
+      mode="widthFix"
+      class="w-full"
+    />
+    <image
+      src="https://go.cdn.heytea.com/storage/ad/2022/03/07/6922f14e1b034f02ad706917b4a7e79d.jpg-app"
+      mode="widthFix"
+      class="w-full"
+    />
+  </view>
+  <view
+    class="w-full h-18 fixed left-0 bottom-0 flex items-center justify-center"
+  >
+    <view
+      class="block w-full h-full lh-15 text-center text-xl text-white bg-black"
+      bind:tap="gotoConfirm"
+    >
+      立即购买
+    </view>
+  </view>
 </view>

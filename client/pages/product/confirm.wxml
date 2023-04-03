@@ -1,0 +1,23 @@
+<view class="px-4 mt-4">
+  <view class="bg-white rounded px-4 py-2">
+    <view class="text-lg font-bold">收货地址</view>
+  </view>
+  <view class="mt-4 bg-white rounded px-4 py-2 flex gap-4">
+    <image
+      src="https://go.cdn.heytea.com/storage/ad/2022/03/07/6922f14e1b034f02ad706917b4a7e79d.jpg-app"
+      mode="widthFix"
+      class="w-25 h-25 rounded"
+    />
+    <view>
+      <view class="text-lg font-bold">桃子1号</view>
+      <view class="text-sm text-grap-500">blah....blah....blah....</view>
+    </view>
+    <view> 选择数量 </view>
+  </view>
+  <view class="mt-4 bg-white rounded px-4 py-2">
+    <view class="text-lg font-bold">备注</view>
+    <textarea placeholder="请输入备注内容" />
+  </view>
+
+  <button class="mt-4" type="primary">确认下单</button>
+</view>
