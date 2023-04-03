@@ -25,7 +25,7 @@ esbuild.build({
   define: {
     __appId: JSON.stringify(projectJSON.appid),
     __version: JSON.stringify(packageJson.version),
-    __apiRoot: '',
+    __apiRoot: JSON.stringify('/'),
   },
 })
 
