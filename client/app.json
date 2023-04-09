@@ -12,14 +12,14 @@
       {
         "text": "首页",
         "pagePath": "pages/home",
-        "iconPath": "statics/icon-home.png",
-        "selectedIconPath": "statics/icon-home-actived.png"
+        "iconPath": "statics/tab-home.png",
+        "selectedIconPath": "statics/tab-home-selected.png"
       },
       {
         "text": "我的",
         "pagePath": "pages/profile",
-        "iconPath": "statics/icon-profile.png",
-        "selectedIconPath": "statics/icon-profile-actived.png"
+        "iconPath": "statics/tab-profile.png",
+        "selectedIconPath": "statics/tab-profile-selected.png"
       }
     ]
   },
