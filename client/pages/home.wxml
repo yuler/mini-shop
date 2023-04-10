@@ -11,7 +11,7 @@
       <image
         mode="widthFix"
         class="w-full"
-        src="{{product.attributes.poster}}"
+        src="http://strapi.ganfans.com{{product.attributes.poster.data.attributes.url}}"
       />
       <view class="px-2">
         <view class="text-lg">{{product.attributes.name}}</view>

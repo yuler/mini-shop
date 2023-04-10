@@ -14,10 +14,12 @@
     "format": "prettier -w \"**/*.{ts,js,wxml,wxss,wxs,json,md}\""
   },
   "dependencies": {
-    "mitt": "^3.0.0"
+    "mitt": "^3.0.0",
+    "qs": "^5.2.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.5",
+    "@types/qs": "^6.9.7",
     "@unocss/cli": "^0.50.6",
     "dotenv": "^10.0.0",
     "esbuild": "^0.14.11",

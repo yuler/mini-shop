@@ -1,3 +1,4 @@
+import qs from 'qs'
 import type {IApp} from '../app'
 import enchangePage from '../enchange-page'
 
@@ -8,8 +9,20 @@ enchangePage({
     products: [],
   },
   async onLoad() {
+    const query = qs.stringify(
+      {
+        populate: {
+          poster: {
+            fields: ['url'],
+          },
+        },
+      },
+      {
+        encode: false,
+      },
+    )
     const {data} = await $app.$api({
-      url: 'products',
+      url: `products?${query}`,
       method: 'GET',
     })
     this.setData({products: data})
