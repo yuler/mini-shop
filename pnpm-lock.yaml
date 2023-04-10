@@ -8,7 +8,7 @@ specifiers:
   esbuild: ^0.14.11
   execa: ^6.0.0
   fast-glob: ^3.2.10
-  miniprogram-api-typings: ^3.4.4
+  miniprogram-api-typings: ^3.9.0
   miniprogram-ci: ^1.8.0
   mitt: ^3.0.0
   prettier: ^2.8.7
@@ -28,7 +28,7 @@ devDependencies:
   esbuild: 0.14.11
   execa: 6.0.0
   fast-glob: 3.2.10
-  miniprogram-api-typings: 3.4.4
+  miniprogram-api-typings: 3.9.0
   miniprogram-ci: 1.8.0
   prettier: 2.8.7
   tsx: 3.12.6
@@ -4639,8 +4639,8 @@ packages:
     resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==}
     dev: true
 
-  /miniprogram-api-typings/3.4.4:
-    resolution: {integrity: sha512-vT4avEJxCnscNXjY3rI0dNtU1tf/mNll9RhAS0uS+eN5IdQ7MrnG5thGOxjoWnDJSiPYLG912IMcf6KKsXEDAQ==}
+  /miniprogram-api-typings/3.9.0:
+    resolution: {integrity: sha512-QCXHHW9H4XYazb8J9EMiFyaOWHXhBG4oehkQqi+76FJpKKIlpgL0ZkXxzJ2L+6T/c5OxKm7iegovKIQGVkZDLQ==}
     dev: true
 
   /miniprogram-ci/1.8.0:
