@@ -1,23 +1,25 @@
 <view class="container">
   <view class="mt-4 pb-10 px-2 grid grid-cols-2 gap-2">
     <view
-      wx:for="{{5}}"
-      wx:for-index="n"
-      wx:key="n"
+      wx:for="{{products}}"
+      wx:for-item="product"
+      wx:key="id"
       class="bg-white rounded overflow-hidden"
       bind:tap="gotoProduct"
-      data-id="{{n}}"
+      data-id="{{id}}"
     >
       <image
         mode="widthFix"
         class="w-full"
-        src="https://go.cdn.heytea.com/storage/ad/2022/03/07/6922f14e1b034f02ad706917b4a7e79d.jpg-app"
+        src="{{product.attributes.poster}}"
       />
       <view class="px-2">
-        <view class="text-lg">桃子{{n}}号</view>
+        <view class="text-lg">{{product.attributes.name}}</view>
         <view class="flex justify-between">
-          <view class="text-lg font-bold">￥99</view>
-          <view class="text-gray-800">销量很好</view>
+          <view class="text-lg font-bold"
+            >￥{{product.attributes.price / 100}}</view
+          >
+          <view class="text-gray-800">{{ product.attributes.summary }}</view>
         </view>
       </view>
     </view>

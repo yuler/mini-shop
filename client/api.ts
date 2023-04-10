@@ -1,6 +1,4 @@
 // https://developers.weixin.qq.com/miniprogram/dev/api/network/request/wx.request.html
-// TODO:
-// import config from '../config'
 
 export async function api<T = any>({
   url,
@@ -42,11 +40,6 @@ export async function api<T = any>({
         // Http code error
         if (response.statusCode < 200 || response.statusCode >= 300) {
           reject(response)
-        }
-
-        // Biz code error
-        if (response.data.code !== 0) {
-          reject(response.data)
         }
 
         resolve(response.data as T)

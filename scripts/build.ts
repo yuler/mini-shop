@@ -13,7 +13,7 @@ const root = path.resolve(__dirname, '..')
 const packageJson: Record<string, any> = JSON.parse(
   await fs.readFile(path.resolve(root, 'package.json'), 'utf-8'),
 )
-const projectJSON: Record<string, any> = JSON.parse(
+const projectJson: Record<string, any> = JSON.parse(
   await fs.readFile(path.resolve(root, 'project.config.json'), 'utf-8'),
 )
 
@@ -23,9 +23,9 @@ esbuild.build({
   outdir: '.',
   outbase: '.',
   define: {
-    __appId: JSON.stringify(projectJSON.appid),
+    __appId: JSON.stringify(projectJson.appid),
     __version: JSON.stringify(packageJson.version),
-    __apiRoot: JSON.stringify('/'),
+    __apiRoot: JSON.stringify('https://strapi.ganfans.com/api/'),
   },
 })
 

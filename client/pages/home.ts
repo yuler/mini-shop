@@ -5,18 +5,14 @@ const $app = getApp<IApp>()
 
 enchangePage({
   data: {
-    time: new Date().toLocaleString(),
+    products: [],
   },
-  onLoad() {
-    /**
-     * Event come from `app`
-     * @example events
-     */
-    $app.$on('app:tick', () => {
-      this.setData({
-        time: new Date().toLocaleString(),
-      })
+  async onLoad() {
+    const {data} = await $app.$api({
+      url: 'products',
+      method: 'GET',
     })
+    this.setData({products: data})
   },
   gotoProduct(event: MP.Touch) {
     const {id} = event.currentTarget.dataset
