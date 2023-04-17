@@ -13,27 +13,25 @@ const PM2_CMD = 'npm run build && pm2 startOrRestart ecosystem.config.js'
 
 http
   .createServer(async function (req, res) {
+    const buffers = []
+    for await (const chunk of req) {
+      buffers.push(chunk)
+    }
+    const data = Buffer.concat(buffers).toString()
+
     const signature = `sha1=${crypto
       .createHmac('sha1', SECRET)
-      .update(chunk.toString())
+      .update(data)
       .digest('hex')}`
     if (req.headers['x-hub-signature'] !== signature) {
       console.log('Invalid signature')
       res.end()
     }
 
-    const buffers = []
-
-    for await (const chunk of req) {
-      buffers.push(chunk)
-    }
-
-    const data = Buffer.concat(buffers).toString()
     const body = JSON.parse(data)
-
     if (
-      !body.head_commit.added.some(file => file.startWith('apps/api')) ||
-      !body.head_commit.removed.some(file => file.startWith('apps/api')) ||
+      !body.head_commit.added.some(file => file.startWith('apps/api')) &&
+      !body.head_commit.removed.some(file => file.startWith('apps/api')) &&
       !body.head_commit.modified.some(file => file.startWith('apps/api'))
     ) {
       console.log('No changes in `apps/api`')
