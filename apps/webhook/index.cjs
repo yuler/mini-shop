@@ -30,9 +30,9 @@ http
 
     const body = JSON.parse(data)
     if (
-      !body.head_commit.added.some(file => file.startWith('apps/api')) &&
-      !body.head_commit.removed.some(file => file.startWith('apps/api')) &&
-      !body.head_commit.modified.some(file => file.startWith('apps/api'))
+      !body.head_commit.added.some(file => file.startsWith('apps/api')) &&
+      !body.head_commit.removed.some(file => file.startsWith('apps/api')) &&
+      !body.head_commit.modified.some(file => file.startsWith('apps/api'))
     ) {
       console.log('No changes in `apps/api`')
       res.end()
