@@ -1,10 +1,3 @@
-# mini shop strapi
+# api
 
-> the [strapi](https://docs.strapi.io/) for mini shop
-
-## Deployment
-
-```bash
-pnpm build
-pm2 start
-```
+> backend api power by [strapi](https://docs.strapi.io/)
