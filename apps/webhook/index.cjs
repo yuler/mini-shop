@@ -1,5 +1,9 @@
-var SECRET = process.env.SECRET // Your secret key from Settings in GitHub
-var API_DIR = process.env.API_DIR // path to the root of your Strapi project on server
+const { config } = require('dotenv')
+
+config()
+
+const SECRET = process.env.SECRET // Your secret key from Settings in GitHub
+const API_DIR = process.env.API_DIR // path to the root of your Strapi project on server
 
 const http = require('http')
 const crypto = require('crypto')

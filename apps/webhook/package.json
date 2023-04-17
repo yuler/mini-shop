@@ -3,5 +3,8 @@
   "private": true,
   "scripts": {
     "start": "node index.cjs"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
   }
 }

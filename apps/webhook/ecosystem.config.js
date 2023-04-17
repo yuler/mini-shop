@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'strapi',
+      name: 'webhook',
       script: 'npm',
       args: 'start',
     },
