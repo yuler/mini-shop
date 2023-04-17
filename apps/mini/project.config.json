@@ -40,26 +40,27 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
-    "useIsolateContext": false,
+    "useIsolateContext": true,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": true,
     "packNpmRelationList": [
       {
-        "packageJsonPath": "package.json",
-        "miniprogramNpmDistDir": "dist"
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./dist/"
       }
     ],
     "minifyWXSS": true,
     "minifyWXML": true,
     "disableUseStrict": false,
     "showES6CompileOption": false,
-    "useCompilerPlugins": [],
-    "condition": false
+    "ignoreUploadUnusedFiles": true,
+    "useStaticServer": true,
+    "useCompilerPlugins": false,
+    "condition": true
   },
   "condition": {},
   "editorSetting": {
-    "tabIndent": "insertSpaces",
+    "tabIndent": "auto",
     "tabSize": 2
   }
 }

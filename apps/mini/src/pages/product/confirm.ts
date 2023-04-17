@@ -87,7 +87,7 @@ enchangePage({
     const { id, quantity, remark, address } = this.data
 
     const _address = `${address.province} ${address.city} ${address.district} ${address.detail}`
-    const { data } = await $app.$api({
+    const { id: orderId } = await $app.$api({
       url: 'api/orders',
       method: 'POST',
       data: {
@@ -102,8 +102,7 @@ enchangePage({
         },
       },
     })
-    console.log(data)
-    // // TODO: Post
-    // console.log({ id, quantity, remark })
+    $app.$toast('✅  下单成功 ~')
+    $app.$goto(`/pages/profile/order/${orderId}`)
   },
 })

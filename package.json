@@ -1,7 +1,7 @@
 {
   "name": "mini-shop",
   "private": true,
-  "packageManager": "pnpm@7.32.0",
+  "packageManager": "pnpm@8.2.0",
   "scripts": {
     "dev": "pnpm --filter @mini-shop/* dev",
     "build": "pnpm --filter @mini-shop/* build",
