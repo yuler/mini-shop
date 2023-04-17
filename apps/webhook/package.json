@@ -1,0 +1,7 @@
+{
+  "name": "@mini-shop/webhook",
+  "private": true,
+  "scripts": {
+    "start": "node index.cjs"
+  }
+}
