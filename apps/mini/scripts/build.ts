@@ -3,7 +3,7 @@ import path from 'node:path'
 import glob from 'fast-glob'
 import esbuild from 'esbuild'
 import { execa } from 'execa'
-import { dirname, exists } from './utils.js'
+import { API_ROOT, dirname, exists } from './utils.js'
 
 // Paths
 const __dirname = dirname(import.meta)
@@ -26,7 +26,7 @@ esbuild.build({
   define: {
     __appId: JSON.stringify(projectJson.appid),
     __version: JSON.stringify(packageJson.version),
-    __apiRoot: JSON.stringify('https://strapi.ganfans.com/api/'),
+    __apiRoot: JSON.stringify(API_ROOT),
   },
 })
 

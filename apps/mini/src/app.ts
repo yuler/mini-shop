@@ -1,7 +1,7 @@
 import mitt from 'mitt'
 
-import {TABS} from './constants'
-import {api as $api} from './api'
+import { TABS } from './constants'
+import { api as $api } from './api'
 
 const emitter = mitt()
 
@@ -10,7 +10,7 @@ const emitter = mitt()
  */
 const $loading = {
   show(options?: MP.ShowLoadingOption) {
-    wx.showLoading(Object.assign({mask: true}, options))
+    wx.showLoading(Object.assign({ mask: true }, options))
   },
   hide() {
     wx.hideLoading()
@@ -92,10 +92,10 @@ function $log(this: IApp, namespace: string, ...args: unknown[]) {
  */
 function $goto(url: string) {
   if (TABS.includes(url)) {
-    wx.switchTab({url})
+    wx.switchTab({ url })
     return
   }
-  wx.navigateTo({url})
+  wx.navigateTo({ url })
 }
 
 /**
@@ -103,7 +103,7 @@ function $goto(url: string) {
  * @param url The page path
  */
 function $redirect(url: string) {
-  wx.redirectTo({url})
+  wx.redirectTo({ url })
 }
 
 /**

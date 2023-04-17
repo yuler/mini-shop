@@ -1,7 +1,7 @@
-import {Preset, defineConfig, presetUno} from 'unocss'
+import { Preset, defineConfig, presetUno } from 'unocss'
 
 export default defineConfig({
-  presets: [presetUno({preflight: false}), presetRemTorpx()],
+  presets: [presetUno({ preflight: false }), presetRemTorpx()],
   preflights: [],
   shortcuts: [],
   blocklist: ['container'],

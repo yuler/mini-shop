@@ -1,4 +1,4 @@
-import {IApp} from './app'
+import { IApp } from './app'
 
 interface Data {
   $loading: boolean
@@ -32,16 +32,16 @@ export default function enchangePage<T = {}, U = {}>(
     this: any,
     query,
   ) {
-    getApp<IApp>().$log('enchangePage => onLoad', {query})
+    getApp<IApp>().$log('enchangePage => onLoad', { query })
 
     // Login by wx.login
     if (!wx.getStorageSync('TOKEN')) {
       try {
         // Login
         const $app = getApp<IApp>()
-        const {code} = await wx.login()
-        const {jwt: token} = await $app.$api({
-          url: 'auth/miniprogram/login',
+        const { code } = await wx.login()
+        const { jwt: token } = await $app.$api({
+          url: 'api/auth/miniprogram/login',
           method: 'POST',
           data: {
             code,

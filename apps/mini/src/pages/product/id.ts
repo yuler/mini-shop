@@ -1,5 +1,5 @@
 import qs from 'qs'
-import type {IApp} from '../../app'
+import type { IApp } from '../../app'
 import enchangePage from '../../enchange-page'
 
 const $app = getApp<IApp>()
@@ -9,7 +9,7 @@ enchangePage({
     product: null,
   },
   async onLoad(event: any) {
-    const {id} = event
+    const { id } = event
     const query = qs.stringify(
       {
         populate: {
@@ -25,14 +25,14 @@ enchangePage({
         encode: false,
       },
     )
-    const {data} = await $app.$api({
-      url: `products/${id}?${query}`,
+    const { data } = await $app.$api({
+      url: `api/products/${id}?${query}`,
       method: 'GET',
     })
-    this.setData({product: data})
+    this.setData({ product: data })
   },
   gotoConfirm(event: MP.TouchEvent) {
-    const {id} = event.currentTarget.dataset
+    const { id } = event.currentTarget.dataset
     $app.$goto(`/pages/product/confirm?id=${id}`)
   },
 })

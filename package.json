@@ -3,12 +3,14 @@
   "private": true,
   "packageManager": "pnpm@7.32.0",
   "scripts": {
+    "dev": "pnpm --filter @mini-shop/* dev",
+    "build": "pnpm --filter @mini-shop/* build",
     "mini:open": "pnpm --filter mini ide:open",
     "mini:dev": "pnpm --filter mini dev",
     "mini:build": "pnpm --filter mini build",
     "mini:upload": "pnpm --filter mini upload",
     "mini:clean": "pnpm --filter mini clean",
-    "api:dev": "pnpm --filter mini dev",
-    "api:build": "pnpm --filter mini build"
+    "api:dev": "pnpm --filter api dev",
+    "api:build": "pnpm --filter api build"
   }
 }

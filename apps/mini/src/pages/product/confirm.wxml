@@ -1,15 +1,29 @@
-<view wx:if="{{product}}" class="bg-gray-200 min-h-screen">
+<view wx:if="{{ product }}" class="bg-gray-200 min-h-screen">
   <view class="px-4 pt-4">
     <view
       class="bg-white rounded px-4 py-2 flex items-center justify-between"
       bind:tap="onChooseAddress"
     >
       <view class="text-lg font-bold">收货地址</view>
-      <view class="text-sm text-gray-500">获取微信收货地址</view>
+
+      <view wx:if="{{ address }}" class="flex-1">
+        <view class="flex justify-between">
+          <view>
+            {{ address.province }} {{ address.city }} {{ address.district }}
+          </view>
+        </view>
+        <view>{{ address.detail }}</view>
+        <view class="flex gap-2">
+          <view>{{ address.name }}</view>
+          <view>{{ address.mobile }}</view>
+        </view>
+      </view>
+      <view wx:else class="text-sm text-gray-500">获取微信收货地址</view>
       <!-- TODO: -->
       <!-- <app-icon name="chevron-right" /> -->
     </view>
     <view class="mt-4 bg-white rounded px-4 py-3 flex gap-4">
+      <!-- prettier-ignore -->
       <image
         src="https://strapi.ganfans.com{{product.attributes.poster.data.attributes.url}}"
         mode="widthFix"
@@ -17,9 +31,9 @@
       />
       <view class="flex-1 flex flex-col justify-between">
         <view>
-          <view class="text-lg font-bold">{{product.attributes.name}}</view>
+          <view class="text-lg font-bold">{{ product.attributes.name }}</view>
           <view class="text-sm text-grap-500">
-            {{product.attributes.summary}}
+            {{ product.attributes.summary }}
           </view>
         </view>
         <view>
@@ -35,7 +49,7 @@
             <input
               class="w-10 h-8 leading-8 text-lg text-center"
               type="number"
-              model:value="{{quantity}}"
+              model:value="{{ quantity }}"
             />
             <view
               class="text-2xl w-8 h-8 block text-center leading-7 border border-solid border-black"
@@ -49,7 +63,7 @@
     </view>
     <view class="mt-4 bg-white rounded px-4 py-2">
       <view class="text-lg font-bold">备注</view>
-      <textarea model:value="{{remark}}" placeholder="请输入备注内容" />
+      <textarea model:value="{{ remark }}" placeholder="请输入备注内容" />
     </view>
 
     <button

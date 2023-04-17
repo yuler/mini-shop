@@ -29,6 +29,7 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
+  "requiredPrivateInfos": ["chooseAddress"],
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "useExtendedLib": {
