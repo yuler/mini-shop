@@ -3,7 +3,7 @@ import fs from 'node:fs/promises'
 
 import ci from 'miniprogram-ci'
 
-import { dirname } from './utils'
+import { dirname } from './utils.js'
 
 // Paths
 const __dirname = dirname(import.meta)
@@ -24,18 +24,18 @@ const {
 } = projectJSON['setting']['packNpmRelationList'][0]
 
 // Build NPM
-// TODO: Remove `feather-icons`
 const buildNpmResult = await ci.packNpmManually({
   packageJsonPath,
   miniprogramNpmDistDir,
 })
 console.log(buildNpmResult)
 
+console.log(path.resolve(root))
 // Upload miniporgram
 const project = new ci.Project({
   appid: projectJSON.appid,
   type: 'miniProgram',
-  projectPath: path.resolve(root),
+  projectPath: path.resolve(root) + '/dist',
   privateKeyPath: path.resolve(root, `./private.${projectJSON.appid}.key`),
   ignores: ['scripts', 'README.md'],
 })

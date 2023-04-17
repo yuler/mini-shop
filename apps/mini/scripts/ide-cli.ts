@@ -4,7 +4,7 @@
  */
 import path from 'node:path'
 import { execa } from 'execa'
-import { IDE_CLI, dirname } from './utils'
+import { IDE_CLI, dirname } from './utils.js'
 
 const __dirname = dirname(import.meta)
 const root = path.resolve(__dirname, '..')
