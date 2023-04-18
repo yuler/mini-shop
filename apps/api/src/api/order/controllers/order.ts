@@ -23,6 +23,15 @@ export default factories.createCoreController(
         filters: {
           userId: id,
         },
+        populate: {
+          productId: {
+            populate: {
+              poster: {
+                fields: ['url'],
+              },
+            },
+          },
+        },
       })
     },
   }),
