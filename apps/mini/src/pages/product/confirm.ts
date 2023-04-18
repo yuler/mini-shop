@@ -103,6 +103,6 @@ enchangePage({
       },
     })
     $app.$toast('✅  下单成功 ~')
-    $app.$goto(`/pages/profile/order/${orderId}`)
+    $app.$goto(`/pages/profile`)
   },
 })

@@ -1,24 +1,28 @@
 <view class="mt-4 pb-10 px-2">
   <view
-    wx:for="{{5}}"
-    wx:for-index="n"
-    wx:key="n"
+    wx:for="{{orders}}"
+    wx:for-item="order"
+    wx:key="id"
     class="mb-2 px-4 py-2 bg-white rounded"
   >
     <view class="flex justify-between items-center">
       <view>
-        <view class="text-lg">桃子1号</view>
-        <view class="text-sm text-gray-500">2023-02-28 19:29:31</view>
+        <view class="text-lg">{{order.address}}</view>
+        <view wx:if="{{order.remark}}" class="text-gray-600">
+          备注: {{order.remark}}
+        </view>
+        <view class="text-sm text-gray-500">{{order.createdAt}}</view>
       </view>
-      <view>未完成</view>
+      <!-- TODO: -->
+      <!-- <view>{{order.status}}</view> -->
     </view>
     <view class="mt-2 flex justify-between items-center">
       <image
-        src="https://go.cdn.heytea.com/storage/ad/2022/03/07/6922f14e1b034f02ad706917b4a7e79d.jpg-app"
+        src="https://strapi.ganfans.com{{order.productId.poster.url}}"
         mode="widthFix"
         class="w-20 h-20 rounded"
       />
-      <view class="text-xl">￥99</view>
+      <view class="text-xl">￥{{order.productId.price / 100}}</view>
     </view>
   </view>
 </view>

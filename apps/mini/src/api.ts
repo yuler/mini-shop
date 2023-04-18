@@ -37,6 +37,8 @@ export async function api<T = any>({
       data,
       header: headers,
       success: response => {
+        // TODO: 401 handle
+
         // Http code error
         if (response.statusCode < 200 || response.statusCode >= 300) {
           reject(response)

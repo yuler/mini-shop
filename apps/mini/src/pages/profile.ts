@@ -4,11 +4,15 @@ import enchangePage from '../enchange-page'
 const $app = getApp<IApp>()
 
 enchangePage({
+  data: {
+    orders: [],
+    pagination: null as any,
+  },
   async onLoad() {
-    const { data } = await $app.$api({
+    const { results, pagination } = await $app.$api({
       url: 'api/orders',
       method: 'GET',
     })
-    console.log(data)
+    this.setData({ orders: results, pagination })
   },
 })
