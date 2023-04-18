@@ -8,6 +8,7 @@ enchangePage({
   data: {
     products: [],
   },
+
   async onLoad() {
     const query = qs.stringify(
       {
@@ -27,6 +28,9 @@ enchangePage({
     })
     this.setData({ products: data })
   },
+
+  onShareAppMessage() {},
+
   gotoProduct(event: MP.Touch) {
     const { id } = event.currentTarget.dataset
     $app.$goto(`/pages/product/id?id=${id}`)
